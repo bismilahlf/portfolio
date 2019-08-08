@@ -1,0 +1,40 @@
+@import "./common.css";
+
+nav {
+  width: 100vw;
+  height: 100vh;
+}
+
+header img:not(:first-of-type) {
+  opacity: 0;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a,
+nav a:visited {
+  color: #fafafa;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 10rem;
+  line-height: 13rem;
+  filter: var(--shadow);
+}
+
+nav a:hover {
+  background-image: linear-gradient(
+    transparent 83%,
+    rgba(255, 255, 255, 1) 83%,
+    rgba(255, 255, 255, 1) 89%,
+    transparent 89%
+  );
+}
