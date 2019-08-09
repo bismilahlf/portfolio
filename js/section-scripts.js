@@ -7,17 +7,14 @@ function onScroll() {
   var currentScroll =
     -scrollTopOffset +
     (document.body.scrollTop || document.documentElement.scrollTop);
-  console.log(currentScroll);
 
   var section = Math.floor(
     (currentScroll + window.innerHeight / 2) / window.innerHeight
   );
 
   if (section !== currentSection) {
-    console.log(currentSection);
-    currentSection = section;
     for (let i = 0; i < sections.length; i++) {
-      if (i === currentSection) {
+      if (i === section) {
         sections[i].style.opacity = 1;
         asideSections[i].style.opacity = 1;
       } else {
@@ -25,6 +22,7 @@ function onScroll() {
         asideSections[i].style.opacity = 0;
       }
     }
+    currentSection = section;
   }
 }
 
