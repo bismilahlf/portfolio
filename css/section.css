@@ -46,6 +46,7 @@ header h2 {
   animation: appear 1000ms ease-in-out forwards;
   filter: var(--shadow);
   transform: translateY(50%);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 @keyframes appear {
@@ -100,6 +101,7 @@ aside {
   height: 100%;
   opacity: 0;
   transition: opacity 500ms linear;
+  overflow: hidden;
 }
 
 .asideSection img {
@@ -118,6 +120,21 @@ aside {
 .asideSection.phone video {
   width: auto;
   height: 63.84%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.asideSection.web {
+  background: url("../img/web.png") center center no-repeat;
+  background-size: auto 100vh;
+}
+
+.asideSection.web img,
+.asideSection.web video {
+  width: auto;
+  height: 61.44%;
   position: absolute;
   top: 50%;
   right: 50%;
