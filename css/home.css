@@ -9,6 +9,33 @@ header img:not(:first-of-type) {
   opacity: 0;
 }
 
+.titleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: var(--margin);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.titleContainer a,
+.titleContainer a:visited {
+  color: #fafafa;
+  text-decoration: none;
+  font-size: 3rem;
+  filter: drop-shadow(0 0rem 1rem rgba(0, 0, 0, 0.1));
+}
+
+.titleContainer a:hover {
+  background-image: linear-gradient(
+    transparent 92%,
+    rgba(255, 255, 255, 1) 92%
+  );
+}
+
 nav {
   position: absolute;
   top: 0;

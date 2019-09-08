@@ -1,4 +1,4 @@
-var links = [...document.getElementsByTagName("a")];
+var links = [...document.getElementsByClassName("js-hover")];
 var imgs = [...document.getElementsByTagName("img")];
 
 function onHover(e) {
