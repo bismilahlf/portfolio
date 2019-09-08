@@ -140,3 +140,7 @@ aside {
   right: 50%;
   transform: translate(50%, -50%);
 }
+
+.asideSection.cover img {
+  object-fit: cover;
+}
