@@ -57,32 +57,27 @@ header h2 {
 
 main {
   position: relative;
-  display: flex;
 }
 
 section {
+  height: 100vh;
   width: 40%;
   opacity: 0;
   animation: appear 500ms ease-in-out forwards 1000ms;
   padding: 0 var(--margin) 0 var(--margin);
-}
-
-section .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  max-width: 80rem;
   transition: opacity 500ms linear;
   letter-spacing: -0.03em;
+  float: left;
+  display: flex;
+  align-items: center;
 }
 
-section .content h3 {
+section h3 {
   font-size: 3rem;
   line-height: 5rem;
 }
 
-section .content .description {
+section .description {
   font-size: 2.5rem;
   line-height: 3rem;
 }
@@ -90,34 +85,27 @@ section .content .description {
 aside {
   position: sticky;
   top: 0;
-  flex: 1;
+  left: 40%;
+  width: 60%;
   height: 100vh;
-}
-
-.asideSection {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
   transition: opacity 500ms linear;
   overflow: hidden;
 }
 
-.asideSection img {
+aside img {
   width: 100%;
   height: 100%;
   object-position: center center;
   object-fit: contain;
 }
 
-.asideSection.phone {
+aside.phone {
   background: url("../img/phone.png") center center no-repeat;
   background-size: auto 100vh;
 }
 
-.asideSection.phone img,
-.asideSection.phone video {
+aside.phone img,
+aside.phone video {
   width: auto;
   height: 63.84%;
   position: absolute;
@@ -126,13 +114,13 @@ aside {
   transform: translate(50%, -50%);
 }
 
-.asideSection.web {
+aside.web {
   background: url("../img/web.png") center center no-repeat;
   background-size: auto 100vh;
 }
 
-.asideSection.web img,
-.asideSection.web video {
+aside.web img,
+aside.web video {
   width: auto;
   height: 61.44%;
   position: absolute;
@@ -141,6 +129,43 @@ aside {
   transform: translate(50%, -50%);
 }
 
-.asideSection.cover img {
+aside.cover img {
   object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  header h2 {
+    bottom: 30vh;
+    font-size: 5rem;
+  }
+
+  nav a:not(:last-of-type) {
+    display: none;
+  }
+
+  section {
+    height: auto;
+    width: 100%;
+    opacity: 1;
+    animation: none;
+    padding: calc(var(--margin) * 3) var(--margin);
+    letter-spacing: -0.03em;
+    float: unset;
+    display: block;
+  }
+
+  aside {
+    position: relative;
+    top: unset;
+    left: unset;
+    width: 100%;
+    height: 65vh;
+    transition: opacity 500ms linear;
+    overflow: hidden;
+  }
+
+  aside.web,
+  aside.phone {
+    background-size: auto 65vh;
+  }
 }

@@ -65,3 +65,11 @@ nav a:hover {
     transparent 89%
   );
 }
+
+@media (max-width: 1024px) {
+  nav a,
+  nav a:visited {
+    font-size: 7rem;
+    line-height: 9rem;
+  }
+}
